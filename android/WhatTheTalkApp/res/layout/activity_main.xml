@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.wtt.app.MainActivity" >
+
+    <TextView
+        android:id="@+id/ipText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ipEdit"
+        android:layout_alignParentLeft="true"
+        android:text="ip: "
+        android:textSize="16sp" />
+
+   <EditText
+       android:id="@+id/ipEdit"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       android:layout_toRightOf="@+id/ipText"
+       android:ems="8"
+       android:inputType="number"
+       android:digits="0123456789."
+       android:text="192.168.1.161"
+       android:textSize="16sp" >
+       
+	   <requestFocus />
+   </EditText>
+
+   <TextView
+        android:id="@+id/portText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ipEdit"
+        android:layout_toRightOf="@+id/ipEdit"
+        android:text="port: "
+        android:textSize="16sp" />
+
+   <EditText
+       android:id="@+id/portEdit"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignTop="@+id/ipEdit"
+       android:layout_toRightOf="@+id/portText"
+       android:ems="5"
+       android:inputType="number"
+       android:text="5566"
+       android:textSize="16sp" />
+
+   <TextView
+       android:id="@+id/nameText"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignBaseline="@+id/connectBtn"
+       android:layout_alignParentLeft="true"
+       android:text="name: "
+       android:textSize="16sp" />
+   
+   <EditText
+       android:id="@+id/nameEdit"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignBaseline="@+id/connectBtn"
+       android:layout_toLeftOf="@+id/connectBtn"
+       android:layout_toRightOf="@+id/nameText"
+       android:ems="6"
+       android:inputType="textPersonName"
+       android:text="Andy Wu"
+       android:textSize="16sp" />
+
+   <Button
+       android:id="@+id/connectBtn"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentRight="true"
+       android:layout_below="@id/portEdit"
+       android:onClick="onConnectBtnClick"
+       android:text="Connect"
+       android:textSize="16sp" />
+
+   <Button
+       android:id="@+id/whatBtn"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentLeft="true"
+       android:layout_below="@+id/connectBtn"
+       android:onClick="onWhatBtnClick"
+       android:text="What"
+       android:textSize="16sp" />
+
+   <Button
+       android:id="@+id/echoBtn"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_above="@+id/msgListView"
+       android:layout_toRightOf="@+id/whatBtn"
+       android:onClick="onEchoBtnClick"
+       android:text="Echo"
+       android:textSize="16sp" />
+   
+   <Button
+       android:id="@+id/dialBtn"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_above="@+id/msgListView"
+       android:layout_toRightOf="@id/echoBtn"
+       android:onClick="onDialBtnClick"
+       android:text="Dial"
+       android:textSize="16sp" />
+   
+   <ListView
+       android:id="@+id/msgListView"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_alignLeft="@+id/whatBtn"
+       android:layout_below="@+id/whatBtn"
+       android:layout_marginTop="16dp" >
+
+   </ListView>
+
+</RelativeLayout>
